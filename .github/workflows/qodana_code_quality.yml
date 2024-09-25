@@ -7,7 +7,6 @@ on:
       - main # The 'main' branch
       - 'releases/*' # The release branches
 
-
 jobs:
   qodana:
     runs-on: ubuntu-latest
@@ -27,5 +26,5 @@ jobs:
         env:
           QODANA_TOKEN: ${{ secrets.QODANA_TOKEN_1818267961 }}
           QODANA_ENDPOINT: 'https://qodana.cloud'
-
-      linter: jetbrains/qodana-jvm:latest
+      - name: 'Linter'
+        uses: jetbrains/qodana-jvm:latest
