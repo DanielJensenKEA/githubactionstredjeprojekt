@@ -28,7 +28,7 @@ class WelcomeControllerTest {
 
     @Test
     void getWelcome() throws Exception {
-        mockMvc.perform(get("/welcome")).andExpect(status().isOk()).andExpect(view().name("welcome"));
+        mockMvc.perform(get("/hello")).andExpect(status().isOk()).andExpect(view().name("hello"));
 
     }
 }
